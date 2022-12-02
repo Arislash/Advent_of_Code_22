@@ -1,5 +1,3 @@
-import array
-
 #A = Rock
 #B = Paper
 #C = Scissors
