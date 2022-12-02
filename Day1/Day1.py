@@ -16,7 +16,6 @@ for line in calories:
 print(f"Elf with most calories: {maxvalue}")
 elf = 0
 
-calories = open('input_1.txt', 'r')
 for line in calories:
     if (line != "\n"):
         elf += int(line)
