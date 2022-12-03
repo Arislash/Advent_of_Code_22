@@ -43,14 +43,12 @@ total = 0
 points = 0
 #Group 3 lines into an array of strings
 for line in lines:
-    if i < 3:
-        line = line.removesuffix('\n')
-        array[i] = line
-        i = i + 1
-    else:
+    line = line.removesuffix('\n')
+    array[i] = line
+    i = i + 1
+    if i == 3:
         i = 0
         #Find out what the common character between 3 strings is
-        #Is this broken?
         for c in array[0]:
             index = array[1].find(c)
             if index != -1:
@@ -61,11 +59,10 @@ for line in lines:
                     print(badge)
                     break
         #Calculate total value of common characters
-        #Or maybe this?
-        if character.isupper():
+        if badge.isupper():
             points = ord(badge) - 38
             total = points + total
-        if character.islower():
+        if badge.islower():
             points = ord(badge) - 96
             total = points + total
 print(total)
