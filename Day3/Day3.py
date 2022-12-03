@@ -1,5 +1,3 @@
-import array
-
 total = 0
 points = 0
 
@@ -31,32 +29,31 @@ for line in lines:
     if character.islower():
         points = ord(character) - 96
         total = points + total
-print(total)
+print(f"Total value of points: {total}")
 
 #---- SECOND TASK ------
 
 
-array = [""] * 3
+list = [""] * 3
 i = 0
 badge = ""
 total = 0
 points = 0
-#Group 3 lines into an array of strings
+#Group 3 lines into an list of strings
 for line in lines:
     line = line.removesuffix('\n')
-    array[i] = line
+    list[i] = line
     i = i + 1
     if i == 3:
         i = 0
         #Find out what the common character between 3 strings is
-        for c in array[0]:
-            index = array[1].find(c)
+        for c in list[0]:
+            index = list[1].find(c)
             if index != -1:
-                character = array[1][index]
-                index = array[2].find(character)
+                character = list[1][index]
+                index = list[2].find(character)
                 if index != -1:
-                    badge = array[2][index]
-                    print(badge)
+                    badge = list[2][index]
                     break
         #Calculate total value of common characters
         if badge.isupper():
@@ -65,4 +62,4 @@ for line in lines:
         if badge.islower():
             points = ord(badge) - 96
             total = points + total
-print(total)
+print(f"Total value of Badges: {total}")
