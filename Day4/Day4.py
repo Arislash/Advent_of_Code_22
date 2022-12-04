@@ -1,7 +1,9 @@
 pairs = 0
 overlaps = 0
+
 list = open('4_input.txt', 'r')
 lines = list.readlines()
+list.close()
 
 numbers1 = ""
 numbers2 = ""
@@ -25,10 +27,11 @@ for line in lines:
     if numbers1.issubset(numbers2):
         pairs += 1
     elif numbers2.issubset(numbers1):
-        pairs +=1
+        pairs +=1   
     result = False
     #Check if there is any overlap between sets
     result = bool(numbers1 & numbers2)
     if result:
         overlaps += 1
-print(overlaps)
+print(f"Amount of ranges fully contained in the other: {pairs}")
+print(f"Amount of ranges that overlapped: {overlaps}")
