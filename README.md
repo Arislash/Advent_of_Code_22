@@ -5,4 +5,5 @@ Its also my first managed repository on github which i am using to learn how it 
 
 I ended up having to go away for some days after the first week or so, and never ended up finishing this. Might do it later if i have time
 
-https://adventofcode.com/2022/about
+The assignments are found here https://adventofcode.com/2022
+
